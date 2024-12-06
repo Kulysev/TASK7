@@ -1,0 +1,99 @@
+1 Задание:
+#include <iostream>
+
+int main() {
+    double a, b;
+    
+    std::cout << "Введите первое число: ";
+    std::cin >> a;
+    std::cout << "Введите второе число: ";
+    std::cin >> b;
+
+    double* ptrA = &a;
+    double* ptrB = &b;
+
+    double max;
+    if (*ptrA > *ptrB) {
+        max = *ptrA;
+    } else {
+        max = *ptrB;
+    }
+
+    std::cout << "Наибольшее число: " << max << std::endl;
+
+    return 0;
+}
+
+2 Задание:
+#include <iostream>
+#include <cmath> 
+
+int main() {
+    double a;
+
+    std::cout << "Введите число: ";
+    std::cin >> a;
+
+    double* ptrA = &a;
+
+    const double epsilon = 1e-10; 
+    if (std::abs(*ptrA) < epsilon) {
+        std::cout << "Знак числа: ноль" << std::endl;
+    } else if (*ptrA > 0) {
+        std::cout << "Знак числа: положительное" << std::endl;
+    } else {
+        std::cout << "Знак числа: отрицательное" << std::endl;
+    }
+
+    return 0;
+}
+
+3 Задание:
+#include <iostream>
+
+int main() {
+    int a, b; 
+
+    std::cout << "Введите первое число: ";
+    std::cin >> a;
+    std::cout << "Введите второе число: ";
+    std::cin >> b;
+
+    int* ptrA = &a;
+    int* ptrB = &b;
+
+    std::cout << "До обмена: a = " << *ptrA << ", b = " << *ptrB << std::endl;
+
+    int temp = *ptrA; 
+    *ptrA = *ptrB;   
+    *ptrB = temp;     
+    // Вывод значений после обмена
+    std::cout << "После обмена: a = " << *ptrA << ", b = " << *ptrB << std::endl;
+
+    return 0;
+}
+
+4 Задание:
+#include <iostream>
+
+int main() {
+    int a, b; 
+
+    std::cout << "Введите первое число: ";
+    std::cin >> a;
+    std::cout << "Введите второе число: ";
+    std::cin >> b;
+
+    int* ptrA = &a;
+    int* ptrB = &b;
+
+    std::cout << "До обмена: a = " << *ptrA << ", b = " << *ptrB << std::endl;
+
+    int temp = *ptrA; 
+    *ptrA = *ptrB;    
+    *ptrB = temp;     
+
+    std::cout << "После обмена: a = " << *ptrA << ", b = " << *ptrB << std::endl;
+
+    return 0;
+}S
